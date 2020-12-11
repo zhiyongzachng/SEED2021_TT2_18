@@ -14,9 +14,9 @@
 
     <h2>Transfer limit: <!--Display transfer limit--></h2>
 
-    <form>
+    <form method="POST" action="{% url 'transaction' %}">{% csrf_token %}
         <label for="payeeID">Payee's Account Number:</label><br>
-        <input type="number" id="payeeID" name="payeeID"><br>
+        <input type="PhoneNumber" id="PhoneNumber" name="User's Phone Number"><br>
         <label for="amount">Amount:</label><br>
         <input type="number" id="amount" name="amount"><br>
         <label for="expensesCat">Purpose:</label><br>
