@@ -22,13 +22,15 @@ def login(request):
 
     return render(request, "dbsapp/login.html")
 
-@login_required
+#@login_required(redirect_field_name='dbsapp/login.html')
 def logout(request):
     return render(request, 'dbsapp/logout.html') 
-@login_required
+
+#@login_required(redirect_field_name='dbsapp/login.html')
 def overview(request):
     return render(request, 'dbsapp/account_info.html')
-@login_required
+
+#@login_required(redirect_field_name='dbsapp/login.html')
 def transaction(request):
     return render(request, 'dbsapp/transaction.html')
 
